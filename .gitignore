@@ -3,3 +3,9 @@ vendor/
 *.exe
 *.dll
 *.lib
+*.pdb
+*.exp
+*.ilk
+*.obj
+*.a
+build/
