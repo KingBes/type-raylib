@@ -1,0 +1,5 @@
+raylib/
+vendor/
+*.exe
+*.dll
+*.lib

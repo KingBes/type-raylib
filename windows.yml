@@ -1,0 +1,39 @@
+name: tphp-raylib
+version: 0.0.1
+
+sources:
+  - compat/user32_ext.def
+  - raylib/src/rcore.c
+  - raylib/src/rtextures.c
+  - raylib/src/rtext.c
+  - raylib/src/rmodels.c
+  - raylib/src/raudio.c
+  - raylib/src/rshapes.c
+  - src
+  - raylib.stub.php
+
+include-paths:
+  - raylib/src/external
+  - include 
+  - compat #  windows *
+
+# windows *
+ld-flags:
+  - opengl32.lib
+  - winmm.lib
+  - user32.lib
+  - gdi32.lib
+  - advapi32.lib
+  - ole32.lib
+  - shlwapi.lib
+
+# windows *
+defines:
+  - PLATFORM_DESKTOP_WIN32 
+  - GRAPHICS_API_OPENGL_33
+  - UNICODE
+  - _CRT_SECURE_NO_WARNINGS
+
+mode: bin
+
+output: tphp-raylib

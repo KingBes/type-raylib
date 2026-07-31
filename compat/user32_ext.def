@@ -1,0 +1,6 @@
+LIBRARY user32.dll
+EXPORTS
+AdjustWindowRectExForDpi
+GetDpiForWindow
+RegisterRawInputDevices
+GetRawInputData

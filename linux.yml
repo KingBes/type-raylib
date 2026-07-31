@@ -1,0 +1,40 @@
+name: tphp-raylib
+version: 0.0.1
+
+sources:
+  - raylib/src/rcore.c
+  - raylib/src/rtextures.c
+  - raylib/src/rtext.c
+  - raylib/src/rmodels.c
+  - raylib/src/raudio.c
+  - raylib/src/rshapes.c
+  - raylib/src/rglfw.c
+  - src
+  - raylib.stub.php
+
+include-paths:
+  - raylib/src/external
+  - include 
+
+# linux *
+ld-flags:
+  - m
+  - dl
+  - pthread
+  - X11
+  - Xext
+  - Xcursor
+  - Xinerama
+  - Xi
+  - Xrandr
+  - GL
+
+# linux *
+defines:
+  - PLATFORM_DESKTOP 
+  - GRAPHICS_API_OPENGL_33
+  - _GLFW_X11
+
+mode: bin
+
+output: tphp-raylib
