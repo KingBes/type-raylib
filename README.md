@@ -2,7 +2,7 @@
 
 ## 环境
 
-- windows
+- windows 
 - linux
 - macos
 - android
@@ -18,9 +18,12 @@ sudo apt install libx11-dev libxext-dev libxcursor-dev libxinerama-dev libxi-dev
 
 ```sh
 # 下载 raylib v6.0
-cd tphp-raylib
+cd type-raylib
 git clone https://github.com/raysan5/raylib.git -b 6.0 --depth 1
+
 # 编译
-tpc windows.yml/linux.yml
+tpc windows.yml # windows
+
+tpc linux.yml # linux
 ```
 
